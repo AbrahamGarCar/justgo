@@ -1,6 +1,8 @@
 const { response } = require('express');
 const Restaurante = require('../models/restaurante');
 
+
+// cambios
 const getRestaurantes = async(req, res = response) => {
 
     const restaurantes = await Restaurante.find().populate('usuario', 'nombre');
