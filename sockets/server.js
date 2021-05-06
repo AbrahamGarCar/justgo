@@ -20,7 +20,7 @@ class Server {
                 // origin: true,
                 // origin: "https://sanguine-fusion-300917.uc.r.appspot.com",
                 // origin: "http://localhost:5000",
-                origin:  "https://justgoo.herokuapp.com",
+                origin:  "https://justgooo.herokuapp.com",
                 methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
                 credentials: true
             },
