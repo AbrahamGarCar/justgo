@@ -49,9 +49,8 @@ moverMarcador(marcador) {
         //     this.marcadores[marcador.id].lng = marcador.lng;
         //     this.marcadores[marcador.id].lat = marcador.lat;
         // }
-        console.log('entre movermarcador');
     for ( const i in this.marcadores ) {
-        if( this.marcadores[i].id == marcador.id ){
+        if( this.marcadores[i].id == marcador.id ) {
             this.marcadores[i].lat = marcador.lat;
             this.marcadores[i].lng = marcador.lng;
             break;

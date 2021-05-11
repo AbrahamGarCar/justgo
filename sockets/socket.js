@@ -27,8 +27,7 @@ const mapaSockets = (cliente, io) => {
     cliente.on('marcador-mover', (marcador) => {
         console.log(marcador);
         mapa.moverMarcador(marcador);
-        // cliente.broadcast.emit('marcador-mover', marcador);
-        
+        cliente.broadcast.emit('marcador-mover', marcador);
     });
 }
 
@@ -74,7 +73,6 @@ const obtenerUsuarios = (cliente, io) => {
     cliente.on('obtener-usuarios', () => {
         // Emite al cliente que acaba de entrar.
         io.to(cliente.id).emit('usuarios-activos', usuariosConectados.getLista());
-        console.log("nuevo commit");
     });
 }
 

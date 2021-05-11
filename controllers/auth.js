@@ -14,7 +14,6 @@ const login = async(req, res = response) => {
     try {
         //Verificar email
         const usuarioDB = await Usuario.findOne({ email });
-        console.log(usuarioDB);
         if (!usuarioDB) {
             return res.status(404).json({
                 ok: false,

@@ -19,9 +19,7 @@
     }
 
     agregarMarcador( marcador) {
-        console.log('agregar marcador',marcador);
         this.marcadores[ marcador.id ] = marcador;
-        console.log(this.marcadores);
     }
 
     borrarMarcador( id ){
@@ -32,7 +30,6 @@
     }
 
     moverMarcador( marcador) {
-        console.log('moviendo',marcador);
 
         this.marcadores[marcador.id].lng = marcador.lng;
         this.marcadores[marcador.id].lat = marcador.lat;
