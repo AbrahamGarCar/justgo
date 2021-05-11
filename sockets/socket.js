@@ -18,7 +18,6 @@ const mapaSockets = (cliente, io) => {
         cliente.broadcast.emit('marcador-nuevo', marcador);
     });
 
-
     cliente.on('marcador-borrar', (id) => {
         mapa.borrarMarcador(id);
         cliente.broadcast.emit('marcador-borrar', id);
