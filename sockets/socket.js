@@ -56,7 +56,7 @@ const mensaje = (cliente, io) => {
 
 // Configurar usuario
 const configurarUsuario = (cliente, io) => {
-    cliente.on('configurar-usuario', (payload, callback = Function) => {
+    cliente.on('configurar-usuario', (payload, callback = Function()) => {
         usuariosConectados.actualizarNombre(cliente.id, payload.nombre);
         io.emit('usuarios-activos', usuariosConectados.getLista());
        
@@ -73,6 +73,12 @@ const obtenerUsuarios = (cliente, io) => {
         // Emite al cliente que acaba de entrar.
         io.to(cliente.id).emit('usuarios-activos', usuariosConectados.getLista());
     });
+}
+
+const compra = (cliente, io) => {
+    cliente.on('compra', () => {
+        io.to()
+    })
 }
 
 module.exports = {
