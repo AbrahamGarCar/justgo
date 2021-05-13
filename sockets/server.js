@@ -17,10 +17,10 @@ class Server {
         // this.io = socketIO(this.httpServer);
         this.io = require("socket.io")(this.httpServer, {
             cors: {
-                origin: true,
+                // origin: true,
                 // origin: "https://sanguine-fusion-300917.uc.r.appspot.com",
                 // origin: "http://localhost:5000",
-                // origin:  "https://justgooo.herokuapp.com",
+                origin:  "https://justgooo.herokuapp.com",
                 // origin:  "http://localhost",
                 methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
                 credentials: true
